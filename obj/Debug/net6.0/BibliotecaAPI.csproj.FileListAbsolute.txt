@@ -77,3 +77,5 @@ C:\Users\SaaSan\Desktop\Universidad\Pruebas de Software\Repositorio\BibliotecaAP
 C:\Users\SaaSan\Desktop\Universidad\Pruebas de Software\Repositorio\BibliotecaAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\SaaSan\Desktop\Universidad\Pruebas de Software\Repositorio\BibliotecaAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\SaaSan\Desktop\Universidad\Pruebas de Software\Repositorio\BibliotecaAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\SaaSan\Desktop\Universidad\Pruebas de Software\Repositorio\BibliotecaAPI\bin\Debug\net6.0\Humanizer.dll
+C:\Users\SaaSan\Desktop\Universidad\Pruebas de Software\Repositorio\BibliotecaAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

@@ -1,21 +1,25 @@
+using API.DataBase;
+using API.Models.Usuario;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BibliotecaAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]/test")]
+    [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        private SitioDB db;
         private static readonly string[] Summaries = new[]
         {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
 
         private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, SitioDB sitioDB)
         {
             _logger = logger;
+            db = sitioDB;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -29,5 +33,13 @@ namespace BibliotecaAPI.Controllers
             })
             .ToArray();
         }
+        [HttpGet]
+        [Route("test2")]
+        public async Task<List<UsuarioDB>> Get2()
+        {
+            List<UsuarioDB> a = await db.Usuarios.ToListAsync();
+            return a;
+        }
+
     }
 }

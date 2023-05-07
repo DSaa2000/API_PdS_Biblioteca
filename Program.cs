@@ -14,7 +14,14 @@ var connectionStringSQLServer = builder.Configuration.GetConnectionString("SQLSe
 builder.Services.AddDbContext<SitioDB>(options =>
     options.UseSqlServer(connectionStringSQLServer)
 );
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowOrigin",
+        builder =>
+        {
+            builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
 
@@ -24,14 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: "AllowOrigin",
-        builder =>
-        {
-            builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-        });
-});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

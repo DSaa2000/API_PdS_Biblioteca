@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BibliotecaAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/test")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

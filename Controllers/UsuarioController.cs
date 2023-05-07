@@ -14,6 +14,7 @@ namespace API.Controllers
     public class UsuarioController : ControllerBase
     {
         private SitioDB db;
+
         public UsuarioController(SitioDB sitioDB)
         {
             db = sitioDB;
